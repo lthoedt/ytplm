@@ -3,7 +3,7 @@ button {
     background-color: var(--clr-background-secondary);
     opacity: 0.9;
     border-radius: var(--borderRarius);
-    padding: calc( var(--safearea) / 2 );
+    padding: var(--halfSafearea);
     color: var(--clr-background);
     font-family: 'Nunito';
     font-weight: 300;
@@ -16,4 +16,5 @@ button {
 
 button > img {
     height: 1.5em;
+    width: 1.5em;
 }

@@ -14,7 +14,7 @@ export default function LandingView(props) {
                     Move, delete or add video's to and from your Playlists!
                 </h2>
             </center>
-            <div className='center'>
+            <div className='align hcenter vcenter'>
                 <div className='infoBlock'>
                     <h2 style={{ color: '#3d3d3d', fontWeight: '300' }}>
                         To get started,

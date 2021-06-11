@@ -1,0 +1,7 @@
+.divider {
+    background-color: var(--clr-background-secondary);
+    border-radius: 100px;
+    height: 0.05em;
+    width: var(--halfSafearea);
+    opacity: 0.8;
+}

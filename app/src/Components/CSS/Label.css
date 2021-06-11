@@ -1,0 +1,15 @@
+.label {
+    border-radius: 100%;
+    padding: calc( var(--safearea) / 3);
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+}
+
+.label > * {
+    font-size: 1.5em;
+    font-weight: 600;
+}
