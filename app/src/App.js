@@ -1,5 +1,6 @@
-import LandingView from "./Views/LandingView";
-import HomeView from "./Views/HomeView";
+import {LandingView} from "./Views/LandingView";
+import {HomeView} from "./Views/HomeView";
+import {PlaylistView} from "./Views/PlaylistView";
 
 import {
     BrowserRouter as Router,
@@ -17,6 +18,10 @@ function App() {
 
                 <Route exact path="/home">
                     <HomeView></HomeView>
+                </Route>
+
+                <Route exact path="/playlist">
+                    <PlaylistView></PlaylistView>
                 </Route>
             </Switch>
         </Router>

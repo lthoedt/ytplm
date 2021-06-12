@@ -1,6 +1,6 @@
 import './CSS/List.css';
 
-export default function List({items}) {
+export function List({items}) {
 
 
     return (

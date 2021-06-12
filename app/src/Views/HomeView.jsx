@@ -1,9 +1,9 @@
-import List from "../Components/List"
+import {List} from "../Components/List"
 
 import { useDispatch, useSelector } from 'react-redux';
-import PlaylistListItem from "../Components/PlaylistListItem";
+import {PlaylistListItem} from "../Components/PlaylistListItem";
 
-export default function HomeView(props) {
+export function HomeView(props) {
 
     const state = useSelector(state => state.playlist);
 
@@ -11,8 +11,6 @@ export default function HomeView(props) {
         return PlaylistListItem( playlist );
     } );
 
-    
-    
     return (
         <div className="App">
             <h3>

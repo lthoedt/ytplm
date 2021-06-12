@@ -5,7 +5,7 @@ import { Label } from './Label';
 
 import { UserListItem } from './UserListItem';
 
-export default function PlaylistListItem(playlist) {
+export function PlaylistListItem(playlist) {
     return (
         <div className="align content hcenter vcenter column">
 

@@ -3,7 +3,7 @@ import { SizedBox } from "../Components/SizedBox";
 
 import googleLogo from '../Assets/Images/GoogleLogo.svg';
 
-export default function LandingView(props) {
+export function LandingView(props) {
     return (
         <div className="App">
             <h1>
