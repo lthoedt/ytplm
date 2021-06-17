@@ -1,0 +1,9 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list.fourths > * {
+    width: calc( 25% - var(--safearea) ) ;
+    margin: var(--halfSafearea);
+}

@@ -1,0 +1,120 @@
+:root {
+    --safearea: 2rem;
+    --halfSafearea: calc( var(--safearea) /2 );
+    --fourthSafearea: calc( var(--safearea) / 4 );
+    --borderRarius: 1.7rem;
+}
+
+body {
+    font-family: 'Nunito';
+    background-color: var(--clr-background);
+    color: var(--clr-text);
+    padding: var(--safearea);
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: 'Nunito';
+    opacity: 0.9;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    opacity: 0.75
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+img {
+    border-radius: calc( var(--borderRarius) / 1.7 );
+    width: 3em;
+    height: 3em;
+    object-fit: cover;
+}
+
+.safearea {
+    margin: var(--safearea);
+}
+
+.safearea.half {
+    margin: var(--halfSafearea);
+}
+
+.infoBlock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--safearea) calc( var(--safearea) * 2 );
+}
+
+.infoBlock::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--clr-background-secondary);
+    opacity: 0.75;
+    border-radius: var(--borderRarius);
+}
+
+.align:not(.content) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: -1;
+}
+
+.align.content {
+    display: flex;
+}
+
+.align.left, .align.content.left, .column.top {
+    justify-content: flex-start;
+}
+
+.align.top, .align.content.top, .column.left {
+    align-items: flex-start;
+}
+
+.align.right, .align.content.right, .column.bottom {
+    justify-content: flex-end;
+}
+
+.align.bottom, .align.content.bottom, .column.right {
+    align-items: flex-end;
+}
+
+.align.hcenter, .align.content.hcenter, .column.vcenter {
+    justify-content: center;
+}
+
+.align.vcenter, .align.content.vcenter, .column.hcenter {
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.self.right {
+    margin-left: auto;
+}

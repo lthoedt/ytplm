@@ -1,0 +1,41 @@
+.playlistListItem {
+    position: relative;
+    padding:  calc(var(--safearea) / 2);
+    width: -webkit-fill-available;
+}
+
+.playlistListItem::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+
+    background-color: var(--clr-background-secondary);
+    
+    opacity: 0.9;
+
+    border-radius: calc(var(--borderRarius) / 1.6);
+}
+
+.playlistListItem > img {
+    width: 4em;
+    height: 4em;
+}
+
+.listItemTitle {
+    color: var(--clr-text-secondary);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.listItemDescription {
+    color: var(--clr-text-secondary);
+    font-weight: 600;
+    font-size: 1.2em;
+    opacity: 0.6;
+}
