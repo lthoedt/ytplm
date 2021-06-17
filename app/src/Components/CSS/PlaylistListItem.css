@@ -1,6 +1,6 @@
 .playlistListItem {
     position: relative;
-    padding:  calc(var(--safearea) / 2);
+    padding:  calc(var(--safearea) / 4);
     width: -webkit-fill-available;
 }
 
@@ -19,23 +19,27 @@
     
     opacity: 0.9;
 
-    border-radius: calc(var(--borderRarius) / 1.6);
+    border-radius: calc(var(--borderRadius) / 1.6);
+}
+
+.playlistListItem.selected::before {
+    opacity: 1;
 }
 
 .playlistListItem > img {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
 }
 
 .listItemTitle {
     color: var(--clr-text-secondary);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .listItemDescription {
     color: var(--clr-text-secondary);
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1em;
     opacity: 0.6;
 }

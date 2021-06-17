@@ -6,6 +6,7 @@ export class Playlist {
         this.dateCreated = dateCreated;
         this.itemCount = itemCount;
         this.owner = owner;
+        this.selected = false;
     }
 
     

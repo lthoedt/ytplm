@@ -1,8 +1,8 @@
 .label {
     border-radius: 100%;
-    padding: calc( var(--safearea) / 3);
-    width: 2em;
-    height: 2em;
+    padding: calc( var(--safearea) / 4);
+    width: 1.2em;
+    height: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,6 @@
 }
 
 .label > * {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 600;
 }

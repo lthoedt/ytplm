@@ -1,5 +1,5 @@
 .userListItem {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .userListItem > *{
@@ -14,4 +14,18 @@
 
 .userListItem .prefix {
     font-weight: 100;
+}
+
+.profilePictureHolder.compact {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-33%, -33%);
+    z-index: -2;
+}
+
+.profilePictureHolder.compact img {
+    border-radius: 100%;
+    width: 2em;
+    height: 2em;
 }

@@ -2,7 +2,7 @@
     --safearea: 2rem;
     --halfSafearea: calc( var(--safearea) /2 );
     --fourthSafearea: calc( var(--safearea) / 4 );
-    --borderRarius: 1.7rem;
+    --borderRadius: 1.7rem;
 }
 
 body {
@@ -37,7 +37,7 @@ h4 {
 }
 
 img {
-    border-radius: calc( var(--borderRarius) / 1.7 );
+    border-radius: calc( var(--borderRadius) / 1.7 );
     width: 3em;
     height: 3em;
     object-fit: cover;
@@ -57,7 +57,10 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: var(--safearea) calc( var(--safearea) * 2 );
+    padding: var(--fourthSafearea) calc( var(--safearea) / 2 );
+    color: var(--clr-text);
+    font-weight: 700;
+    width: fit-content;
 }
 
 .infoBlock::before {
@@ -68,8 +71,10 @@ img {
     width: 100%; 
     height: 100%; 
     background-color: var(--clr-background-secondary);
-    opacity: 0.75;
-    border-radius: var(--borderRarius);
+    opacity: 0.6;
+    border-radius: calc(var(--borderRadius) / 2);
+    display: flex;
+    justify-content: center;
 }
 
 .align:not(.content) {
@@ -110,6 +115,18 @@ img {
     align-items: center;
 }
 
+.row {
+    display: flex;
+}
+
+.row > * {
+    flex: 1;
+}
+
+.row > *.half {
+    flex: 2;
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -117,4 +134,17 @@ img {
 
 .self.right {
     margin-left: auto;
+}
+
+.table {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.column.fourth {
+    width: 25%;
+}
+
+.column.fill {
+    width: -webkit-fill-available;
 }

@@ -3,7 +3,19 @@
     flex-wrap: wrap;
 }
 
-.list.fourths > * {
-    width: calc( 25% - var(--safearea) ) ;
+.list > * {
     margin: var(--halfSafearea);
+    min-width: fit-content;
+}
+
+.list.fourths:not(.list.vertical) > * {
+    width: calc( 25% - var(--safearea) ) ;
+}
+
+.list.vertical {
+    flex-direction: column;
+}
+
+.list.vertical > * {
+    width: auto ;
 }

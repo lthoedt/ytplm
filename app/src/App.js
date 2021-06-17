@@ -1,6 +1,6 @@
-import {LandingView} from "./Views/LandingView";
-import {HomeView} from "./Views/HomeView";
-import {PlaylistView} from "./Views/PlaylistView";
+import {LandingPage} from "./Pages/LandingPage";
+import {HomePage} from "./Pages/HomePage";
+import {PlaylistPage} from "./Pages/PlaylistPage";
 
 import {
     BrowserRouter as Router,
@@ -13,15 +13,15 @@ function App() {
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <LandingView></LandingView>
+                    <LandingPage></LandingPage>
                 </Route>
 
                 <Route exact path="/home">
-                    <HomeView></HomeView>
+                    <HomePage></HomePage>
                 </Route>
 
                 <Route exact path="/playlist">
-                    <PlaylistView></PlaylistView>
+                    <PlaylistPage></PlaylistPage>
                 </Route>
             </Switch>
         </Router>
