@@ -1,3 +1,5 @@
 .vscode/
 ytplm/package-lock.json
 app/package-lock.json
+server/package-lock.json
+node_modules/
