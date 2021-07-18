@@ -1,0 +1,28 @@
+{
+    "name": "ytplm_server",
+    "version": "1.0.0",
+    "description": "This is the server for Youtube Playlist Manager",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lthoedt/ytplm.git"
+    },
+    "keywords": [
+        "youtube"
+    ],
+    "author": "lthoedt",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lthoedt/ytplm/issues"
+    },
+    "homepage": "https://github.com/lthoedt/ytplm#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "http": "^0.0.1-security",
+        "nodemon": "^2.0.12"
+    }
+}
