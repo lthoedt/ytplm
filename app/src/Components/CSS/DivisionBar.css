@@ -1,0 +1,16 @@
+.divisionBar-holder {
+    position: relative;
+    z-index: 1;
+}
+
+.divisionBar-innerBar {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    z-index: 2;
+    border-radius: inherit;
+}
+
+.divisionBar-labels {
+    z-index: 3;
+}

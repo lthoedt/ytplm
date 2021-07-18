@@ -2,9 +2,10 @@
     position: relative;
     padding:  calc(var(--safearea) / 4);
     width: -webkit-fill-available;
+    cursor: pointer;
 }
 
-.playlistListItem::before {
+.playlistListItem::before, .track-container::before {
     content: "";
     position: absolute;
 

@@ -6,7 +6,7 @@ import { SizedBox } from './SizedBox';
 export function UserListItem({ user, prefix, compact = false }) {
 
     var profilePictureComponent = (
-        <img src={user.profilePicture} alt="profile picture" />
+        <img src={user.profilePicture} alt="profile" />
     );
 
     return (

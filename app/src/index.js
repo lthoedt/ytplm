@@ -3,6 +3,7 @@ import './Styles/Colors.css';
 
 import './Styles/Light.css';
 import './Styles/Main.css';
+import './functions.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

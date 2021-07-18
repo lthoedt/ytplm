@@ -1,7 +1,7 @@
 :root {
     --safearea: 2rem;
-    --halfSafearea: calc( var(--safearea) /2 );
-    --fourthSafearea: calc( var(--safearea) / 4 );
+    --halfSafearea: calc( var(--safearea) /2);
+    --fourthSafearea: calc( var(--safearea) / 4);
     --borderRadius: 1.7rem;
 }
 
@@ -11,6 +11,14 @@ body {
     color: var(--clr-text);
     padding: var(--safearea);
     margin: 0;
+}
+
+input {
+    font-family: 'Nunito';
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 h1 {
@@ -37,7 +45,7 @@ h4 {
 }
 
 img {
-    border-radius: calc( var(--borderRadius) / 1.7 );
+    border-radius: calc( var(--borderRadius) / 1.7);
     width: 3em;
     height: 3em;
     object-fit: cover;
@@ -57,7 +65,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: var(--fourthSafearea) calc( var(--safearea) / 2 );
+    padding: var(--fourthSafearea) calc( var(--safearea) / 2);
     color: var(--clr-text);
     font-weight: 700;
     width: fit-content;
@@ -66,15 +74,16 @@ img {
 .infoBlock::before {
     content: "";
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-color: var(--clr-background-secondary);
     opacity: 0.6;
     border-radius: calc(var(--borderRadius) / 2);
     display: flex;
     justify-content: center;
+    z-index: -1;
 }
 
 .align:not(.content) {
@@ -119,11 +128,11 @@ img {
     display: flex;
 }
 
-.row > * {
-    flex: 1;
+.row>* {
+    /* flex: 1; */
 }
 
-.row > *.half {
+.row>*.half {
     flex: 2;
 }
 
@@ -147,4 +156,51 @@ img {
 
 .column.fill {
     width: -webkit-fill-available;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    min-width: fit-content;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.8em;
+    padding: 0.5em;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.stickToTop {
+    position: sticky;
+    top: 0;
 }

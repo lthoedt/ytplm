@@ -1,0 +1,115 @@
+.track-container {
+    position: relative;
+    padding: var(--fourthSafearea);
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+
+    transition-duration: 100ms;
+}
+
+.track-button {
+    background-color: var(--clr-text);
+    width: 2.5em;
+    height: 2.5em;
+    position: relative;
+    border-radius: 100%;
+    margin: var(--halfSafearea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition-duration: 100ms;
+}
+
+.track-button.opened {
+    transform: scale(0);
+    display: none;
+}
+
+.track-button > * {
+    color: var(--clr-text-secondary);
+    font-size: 2em;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.track-holder {
+    margin-top: 0;
+    position: relative;
+}
+
+/* .track-holder::after {
+    content: '';
+    background-color: var(--clr-background-secondary);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+    border-radius: calc(var(--borderRadius) / 1.6);
+} */
+
+.track-container.opened::after, .track-options.opened::after {
+    content: '';
+    background-color: var(--clr-background-secondary);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+    border-radius: calc(var(--borderRadius) / 1.6);
+    top: 0;
+    left: 0;
+}
+
+.track-container.opened.left::after {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.track-options.opened.left::after {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.track-options-button {
+    width: 2.5em;
+    height: 1.5em;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+}
+
+.track-options {
+    height: 100%;
+    /* position: relative; */
+    /* display: none !important; */
+    position: absolute;
+    transform: translateX(100%);
+    /* z-index: -1; */
+    opacity: 0;
+}
+
+.track-options.opened {
+    /* display: flex !important; */
+    position: relative;
+    transform: none;
+    opacity: 1;
+}
+
+.track-options > *:not(:first-child) {
+    margin-right: var(--halfSafearea);
+}
+
+.track-info {
+    display: none !important;
+    margin-left: var(--halfSafearea);
+    flex-direction: row;
+}
+
+.track-info.opened {
+    display: flex !important;
+}
